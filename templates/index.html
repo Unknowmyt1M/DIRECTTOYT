@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+            <h1 class="mb-5">YouTube Tools</h1>
+            <div class="d-grid gap-4">
+                <a href="/download" class="btn btn-primary btn-lg p-4">
+                    <i class="fas fa-download me-2"></i>
+                    Download YT Video
+                </a>
+                <a href="/metadata" class="btn btn-secondary btn-lg p-4">
+                    <i class="fas fa-info-circle me-2"></i>
+                    Extract Metadata
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Set any template variables for JavaScript to use
+    const authSuccess = {{ auth_success|default('false')|tojson }};
+</script>
+{% endblock %}
